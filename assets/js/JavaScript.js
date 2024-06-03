@@ -1,4 +1,5 @@
 const ingredientEl = document.getElementById("ingredients")
+const dishEl = document.getElementById("Dish")
 
 fetch ('https://www.themealdb.com/api/json/v1/1/random.php').
 then (function (res) {
@@ -6,6 +7,14 @@ then (function (res) {
   }).then(function (allData) {
   console.log(allData);
   console.log(allData.meals[0].strIngredient1) //dot notation to access 
+  console.log(allData.meals[0].strMeal)
+
+  const dishName = document.createElement("h1")
+
+  dishName.textContent= [`
+  ${allData.meals[0].strMeal}`]
+  
+  dishEl.append(dishName)
 
   const ingredientList = document.createElement("h4");
   
