@@ -1,7 +1,8 @@
-fetch('https://api.edamam.com/doc/open-api/recipe-search-v2.json')
-.then(function(res) {
+fetch ('https://www.themealdb.com/api/json/v1/1/random.php').
+then (function (res) {
   console.log(res);
   return res.json();
-}) .then(function(data){
-  console.log("after json()", data)
+  }).then(function (data) {
+console.log("after json()", data); 
+  
 });
