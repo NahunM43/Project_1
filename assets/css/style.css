@@ -1,5 +1,4 @@
-/* css will go here 
- */
+
  * {
     box-sizing: border-box;
     padding: 0;
@@ -8,6 +7,7 @@
 
 body {
     background-color: #d9dcd6;
+    width: 100%;
 }
 
 .header {
@@ -27,12 +27,27 @@ body {
     color: #d9dcd6;
 }
 
+.column-img{
+    width: 45%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    float: left;
+    justify-content: space-between;
+}
+
+.column-middle{
+    width: 30%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+
+}
 
 footer{
 margin-top: 10px;
 
 }
-
 
 .search-bar{
     display: block;
@@ -46,20 +61,27 @@ form{
 text-align: center;    
 }
 .column{
-    width: 300px;
+    width: 30%;
     border: 15px solid green;
     padding: 50px;
     margin: 20px;
-
 }
 
-.get-recipe{
-    display: block;
-    margin-left: 100px;
-    padding: 20px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.column {
+    float: left;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;}
 
+
+
+.left, .right {
+  width: 25%;
 }
 
-
-
+.middle {
+  width: 50%;
+}
