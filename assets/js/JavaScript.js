@@ -1,5 +1,6 @@
 const ingredientEl = document.getElementById("ingredients")
 const dishEl = document.getElementById("Dish")
+const directionEl = document.getElementById("Directions")
 
 fetch ('https://www.themealdb.com/api/json/v1/1/random.php').
 then (function (res) {
@@ -8,6 +9,14 @@ then (function (res) {
   console.log(allData);
   console.log(allData.meals[0].strIngredient1) //dot notation to access 
   console.log(allData.meals[0].strMeal)
+  console.log(allData.meals[0].strInstructions)
+
+  const directionName = document.createElement("h4")
+
+  directionName.textContent=[`
+  ${allData.meals[0].strInstructions}`]
+
+  directionEl.append(directionName)
 
   const dishName = document.createElement("h1")
 
